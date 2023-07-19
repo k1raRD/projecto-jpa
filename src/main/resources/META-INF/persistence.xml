@@ -10,6 +10,8 @@
 		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 		<!-- Define las clases que seran mapeadas al configurarse a la base de datos -->
 		<class>com.k1rard.projectjpa.entities.Disquera</class>
+		<class>com.k1rard.projectjpa.entities.Genero</class>
+		<class>com.k1rard.projectjpa.entities.SubGenero</class>
 		<properties>
 			<property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />
 			<property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/tienda_musical" />

@@ -75,5 +75,22 @@ class DisqueraDAOImplTest {
 		
 		System.out.println("Disquera: " + disquera.getDescripcion());
 	}
+	
+	@Test
+	void testConsultarByDescripcionJPQL() {
+		Disquera disquera = this.disqueraDAO.consultarByDescripcionJPQL("Sony music");
+		
+		assertNotNull(disquera);
+		assertEquals("Sony music", disquera.getDescripcion());
+	}
 
+	@Test
+	void consultarByDescripcionNativeTest() {
+		Disquera disquera = this.disqueraDAO.consultarByDescripcionNative("Sony music");
+		
+		assertNotNull(disquera);
+		assertEquals("Sony music", disquera.getDescripcion());
+		
+		System.out.println("Descripcion: " + disquera.getDescripcion());
+	}
 }
